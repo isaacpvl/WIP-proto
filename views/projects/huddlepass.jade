@@ -1,0 +1,139 @@
+
+block nav
+	nav.hide
+		ul
+			include ../resource/pvl
+			li.nav.navb#navb
+				a#navlink(data-pathname="coolhouse")
+					span &#8249;
+					| Prev
+			li.nav.navc#navc
+				a#navlink(data-pathname="recent")
+					| Next
+					span &#8250;
+
+block header
+	header.hide
+		.wrap
+			.logo
+				span#logo(data-speed="5.55")
+					img(src="/_img/huddlepass/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1 Putting fans inside the huddle with coaches and players.
+		.fade
+		.slide
+	.push#push
+
+block work
+	section.work.bgfade
+		.arrowbar#arrow.hide
+			.arrow#work
+		.head
+			h5 Overview
+		.overview
+			.detail
+				p I designed a community platform for the fans who just can&rsquo;t get enough and want to be on the inside with coaches and players.
+			.context
+				div
+					h6 My Role:
+					p web/UI design & brand
+				div
+					h6 When:
+					p late 2013
+				div
+					h6 With:
+					p just me 
+						i (freelancing)
+		.itemhead
+			h2 Huddle communities
+		.visual.fout.vport.premier
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span huddlepass.com/isu/football
+				video(autoplay="true", controls="true", preload="auto", loop="loop", muted="muted", poster="/_img/huddlepass/hpass-huddles-poster.jpg")
+					source(src="/_img/huddlepass/hpass-huddles.webm", type="video/webm")
+					source(src="/_img/huddlepass/hpass-huddles.mp4", type="video/mp4")
+				.fin
+		.itemhead
+			h3 Huddle community feed
+		.visual.fout.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span huddlepass.com/isu/football
+				img(src="/_img/huddlepass/hpass-01.jpg")
+				.fin
+		.itemhead
+			h3 Landing page
+		.visual.fout.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span huddlepass.com
+				img(src="/_img/huddlepass/hpass-02.jpg")
+				.fin
+		.itemhead
+			h3 Responsive for mobile
+		.visual.fout.multiphone
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				img.header(src="/_img/huddlepass/hpass-04h.png")
+				.frame.scroll
+					img(src="/_img/huddlepass/hpass-04.jpg")
+				.bottom
+					div
+						span
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame.scroll.app
+					img(src="/_img/huddlepass/hpass-05.jpg")
+				.bottom
+					div
+						span
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				img.header(src="/_img/huddlepass/hpass-04h.png")
+				.frame.scroll
+					img(src="/_img/huddlepass/hpass-06.jpg")
+				.bottom
+					div
+						span
+			.fin
+		.itemhead
+			h3 UI kit & style guide
+		.visual.zoom
+			.shot
+				img(src="/_img/huddlepass/hpass-03.jpg")
+		.footlink
+			p You can also check out <a href="https://dribbble.com/isaacpvl/projects/173459-HuddlePass", target="_blank">this project on dribbble</a>
+
+block next
+	section.next.hide.recent#navlink(data-pathname="recent")
+		.head
+			h5 Also check out
+		.peek#next
+			h1 Just recently...
+		.peekbg

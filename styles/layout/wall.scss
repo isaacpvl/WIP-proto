@@ -1,0 +1,113 @@
+
+
+// Wall styles
+// ------------------------------------------------------------
+
+	section.wall {
+		height: 100%;
+		min-height: 684px;
+		max-height: 810px;
+		background: $wht;
+		overflow: visible;
+		.head {
+			display: none;
+			@include padding-leader(3);
+		}
+		.fade {
+			position: absolute;
+			@include onepos(0);
+			z-index: -1;
+			width: 100%;
+			max-width: $max-width;
+			margin: auto;
+			@include gradient-vert-d($wht-0, 0%, $wht, 91%);
+		}
+		.wall {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: -1000;
+			max-width: $max-width;
+			height: 100%;
+			margin: 0 auto;
+			opacity: 0.2;
+			overflow: hidden;
+			@include trans(0.5s);
+			.fade {
+				display: none;
+				position: fixed;
+				z-index: 3;
+				top: 0;
+				bottom: auto;
+				width: 100%;
+				min-width: 320px;
+				max-width: $max-width;
+				margin: auto;
+				.fill {
+					@include gradient-vert-d($blu-n, 40%, $blu, 100%);
+					img {
+						width: 100%;
+						height: auto;
+						opacity: 0;
+					}
+				}
+				&::after {
+					content: '';
+					display: block;
+					width: 100%;
+					min-width: 320px;
+					max-width: $max-width;
+					height: 1200px;
+					margin: auto;
+					background: $blu;
+				}
+			}
+			video {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 1;
+				width: 100%;
+				min-width: 1280px;
+				max-width: $max-width;
+				background-color: $wht !important;
+			}
+		}
+	}
+
+
+// Media queries
+// ------------------------------------------------------------
+
+	@media screen and (max-width: 1200px) {
+		section.wall {
+			max-height: 720px;
+		}
+	}
+	@media screen and (max-width: 959px) {
+		section.wall {
+			display: inline-block;
+			height: auto;
+			min-height: 0;
+			max-height: none;
+			.head {
+				display: block;
+			}
+			.fade, .wall {
+				display: none;
+				video {
+					display: none;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		section.wall {
+			.head {
+				@include padding-leader(1.5);
+			}
+		}
+	}
+

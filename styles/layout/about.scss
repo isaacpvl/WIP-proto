@@ -1,0 +1,221 @@
+
+
+// About styles
+// ------------------------------------------------------------
+
+	section.about {
+		@include padding-trailer(15);
+		color: $wht;
+		background: $blu;
+		h5 {
+			color: $wht;
+			&::after {
+				background-color: $wht;
+			}
+		}
+		h1, h2 {
+			text-shadow: 1px 2px $blk-15;
+		}
+		p {
+			text-shadow: 1px 1px $blk-2;
+		}
+	}
+
+// skills section
+	section.skills {
+		// @include padding-trailer(15);
+		text-align: center;
+		background: rgba($blu, 0.9);
+		.fade {
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			@include gradient-vert($blu-n, $blu);
+		}
+		b {
+			font-size: 30px;
+			line-height: 0;
+			font-family: $caps;
+			font-weight: 300;
+		}
+	}
+
+// story section
+	section.story {
+		// @include padding-trailer(15);
+		.bio {
+			position: relative;
+			z-index: 9;
+			width: 100%;
+			h1 {
+				min-width: 700px;
+				font-weight: 500;
+				white-space: nowrap;
+				strong {
+					display: block;
+					font-weight: 800;
+				}
+			}
+			p {
+				padding-right: 12%;
+			}
+		}
+		.head h5 {
+			color: $blk-55;
+			&::after {
+				background-color: $blk-55;
+			}
+		}
+		.cred {
+			position: relative;
+			z-index: 9;
+			margin: auto;
+			@include padding-leader(2);
+			@include padding-trailer(2);
+			@include lineh(9);
+			text-align: center;
+			a {
+				opacity: 0.5;
+				&:hover, &:focus {
+					opacity: 0.9;
+				}
+				&:active {
+					opacity: 1;
+				}
+			}
+			li {
+				display: inline-block;
+				@include padding-x(30px);
+			}
+			img {
+				width: auto;
+				height: 60px;
+			}
+		}
+		.photo {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 55%;
+			width: 50%;
+			min-width: 660px;
+			text-align: right;
+			@include noselect;
+			img {
+				width: 90%;
+				min-width: 540px;
+				max-width: 720px;
+				height: auto;
+				pointer-events: none;
+			}
+		}
+	}
+
+
+// Media queries
+// ------------------------------------------------------------
+
+	@media screen and (min-width: 1201px) {
+		section.story {
+			.bio {
+				width: 100%;
+				max-width: 1164px;
+				margin: auto;
+				.point {
+					margin: 0;
+					@include padding-leader(3);
+					@include padding-trailer(0);
+				}
+				h1 strong {
+					display: block;
+					font-weight: 800;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 1200px) {
+		section.skills {
+			@include padding-trailer(10);
+			br {
+				display: none;
+			}
+		}
+		section.story {
+			.bio {
+				h1 {
+					min-width: 0;
+					white-space: normal;
+				}
+				p {
+					display: block;
+					width: 100%;
+					padding-right: 0;
+				}
+			}
+			.photo {
+				display: none;
+			}
+			br {
+				display: none;
+			}
+		}
+	}
+	@media screen and (max-width: 959px) {
+		section.skills {
+			background: $blu;
+			.fade {
+				display: none;
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		section.skills {
+			@include padding-trailer(5);
+		}
+		section.story {
+			@include padding-trailer(8.5);
+			.bio {
+				@include trailer(0);
+				.point {
+					@include padding-trailer(1);
+				}
+			}
+			.cred {
+				@include padding-leader(3);
+				@include lineh(4.5);
+				li {
+					@include padding-x(12px);
+					&:last-of-type {
+						display: none;
+					}
+				}
+				img {
+					@include tscale(0.8);
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 420px) {
+		section.skills {
+			@include padding-trailer(5);
+		}
+		section.story {
+			@include padding-trailer(7.5);
+			.cred {
+				// @include padding-leader(3);
+				@include lineh(3);
+				li {
+					@include padding-x(6px);
+					&:nth-of-type(7) {
+						display: none;
+					}
+				}
+				img {
+					@include tscale(0.7);
+				}
+			}
+		}
+	}

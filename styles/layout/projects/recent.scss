@@ -1,0 +1,71 @@
+
+
+// Recent work styles
+// ------------------------------------------------------------
+
+	$pcolor:	#bcbab9;
+	$pcolorb:	#a64c61;
+	body.project.recent {
+		header {
+			background: $pcolor url('/_img/recent/recentbg.jpg') no-repeat;
+			background-size: 100%;
+			background-position: 0% 75%;
+			.fade {
+				@include gradient-vert-d(rgba($pcolor, 0), 50%, $pcolor, 100%);
+				display: none;
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolor;
+		}
+		@media screen and (max-width: 1140px) {
+			header {
+				background-size: 125%;
+				background-position: 65% 75%;
+			}
+		}
+		@media screen and (max-width: 959px) {
+			header {
+				background-size: 150%;
+			}
+		}
+		@media screen and (max-width: 640px) {
+			header {
+				background-size: 240%;
+				background-position: 70% 25%;
+			}
+		}
+	}
+	body.recent.fold {
+		.arrow {
+			@include trans(0.1s);
+		}
+	}
+
+// next
+	body.project {
+		section.next.recent {
+			&:hover, &.active {
+				h1 {
+					color: $red;
+				}
+				.peek {
+					background: $blk-15;
+				}
+			}
+			.peekbg {
+				background: $pcolor url('/_img/recent/recentbg.jpg') no-repeat;
+				background-size: 100%;
+				background-position: 0% 40%;
+			}
+			@media screen and (max-width: 640px) {
+				.peekbg {
+					background-size: 100%;
+					background-position: 50% 30%;
+				}
+			}
+		}
+	}

@@ -1,0 +1,87 @@
+
+block nav
+	nav.hide
+		ul
+			include ../resource/pvl
+			li.nav.navb#navb
+				a#navlink(data-pathname="gennutrition")
+					span &#8249;
+					| Prev
+			li.nav.navc#navc
+				a#navlink(data-pathname="toggle")
+					| Next
+					span &#8250;
+
+block header
+	header.hide
+		.wrap
+			.logo
+				span#logo(data-speed="5.55")
+					img(src="/_img/2old2play/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1 A social hub that sparks community playing together.
+		.fade
+		.slide
+	.push#push
+
+block work
+	section.work.bgfade
+		.arrowbar#arrow.hide
+			.arrow#work
+		.head
+			h5 Overview
+		.overview
+			.detail
+				p I took a large community&rsquo;s dated website and designed it to be a social hub that gets people to start playing together.
+			.context
+				div
+					h6 My Role:
+					p web design & brand
+				div
+					h6 When:
+					p late 2013
+				div
+					h6 With:
+					p just me 
+						i (freelancing)
+		.itemhead
+			h3 Homepage &<br> community feed
+		.visual.fout.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span 2old2play.com
+				img(src="/_img/2old2play/2o2p-02.jpg")
+				.fin
+		.itemhead
+			h3 Feature slider front-end
+		.visual.single
+			.shot
+				video(autoplay="true", controls="true", preload="auto", loop="loop", muted="muted", poster="/_img/2old2play/2o2p-slider-poster.jpg")
+					source(src="/_img/2old2play/2o2p-slider.webm", type="video/webm")
+					source(src="/_img/2old2play/2o2p-slider.mp4", type="video/mp4")
+		.itemhead
+			h3 Alternate homepage
+		.visual.fout.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span 2old2play.com
+				img(src="/_img/2old2play/2o2p-01.jpg")
+				.fin
+		.footlink
+			p You can also check out <a href="https://dribbble.com/isaacpvl/projects/170094-2old2play", target="_blank">this project on dribbble</a>
+
+block next
+	section.next.hide.toggle#navlink(data-pathname="toggle")
+		.head
+			h5 Next Project
+		.peek#next
+			img(src="/_img/toggle/logo.png")

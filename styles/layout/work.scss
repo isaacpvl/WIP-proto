@@ -1,0 +1,443 @@
+
+
+// Work section styles
+// ------------------------------------------------------------
+
+	section.work {
+		z-index: 3;
+		@include padding-trailer(18);
+		text-align: center;
+		background: $wht;
+		.project {
+			position: relative;
+			z-index: 1;
+			display: inline-block;
+			width: 100%;
+			margin: auto;
+			@include padding-leader(4);
+			@include padding-trailer(9);
+			overflow: hidden;
+			&:first-of-type {
+				@include leader(-27);
+			}
+			&:nth-of-type(4) {
+				@include trailer(0);
+			}
+			.info {
+				width: 34%;
+				@include leader(5.5);
+				text-align: left;
+				h2 {
+					@include lineh(5.5);
+					margin-left: -2px;
+					@extend .caps-d;
+					white-space: nowrap;
+				}
+				p {
+					@include leader(1);
+					@include trailer(3.5);
+				}
+				h2.short {
+					@include lineh(4.5);
+					@include trailer(2);
+				}
+				.role {
+					position: relative;
+					width: 105%;
+					@include leader(1.5);
+					padding-left: 57px;
+					@include lineh(2.5);
+					font-size: 20px;
+					white-space: nowrap;
+					i {
+						font-size: 16px;
+						letter-spacing: -0.02em;
+						opacity: 0.6;
+					}
+					h6 {
+						position: absolute;
+						top: 0;
+						left: 0;
+						margin-right: 4px;
+						@include lineh(2.5);
+						@extend .caps-l;
+					}
+				}
+				.button {
+					width: 60%;
+				}
+				.button#livelink {
+					display: none;
+				}
+			}
+			.info.more {
+				@include leader(4.5);
+				h2 {
+					@include trailer(2);
+					font-family: $serif;
+					letter-spacing: -0.01em;
+					text-transform: none;
+					white-space: normal;
+				}
+				h6 {
+					float: left;
+					margin-left: 65%;
+					@include leader(-5);
+					@include lineh(2.75);
+					@include padding-x(12px);
+					@extend .caps-l;
+					font-size: 14px;
+					font-weight: 700;
+					letter-spacing: 0.02em;
+					@include stroke(2px, $red);
+					color: $red;
+					span {
+						letter-spacing: -0.04em;
+					}
+				}
+			}
+		}
+		.project.offset {
+			@include trailer(4);
+			.info {
+				@include leader(6.5);
+			}
+		}
+		.pwrap {
+			position: relative;
+			max-width: 1282px;
+			margin: auto;
+		}
+		.preview {
+			position: relative;
+			z-index: 2;
+			width: 62.5%;
+			max-width: 782px;
+			height: 100%;
+			cursor: pointer;
+			img {
+				max-width: 780px;
+			}
+			.browser.cond {
+				width: 92.5%;
+				max-width: 722px;
+			}
+			.multiphone {
+				width: 97.5%;
+			}
+			.phone {
+				img {
+					@include border(1px, $drk-l);
+				}
+			}
+			.shot {
+				position: relative;
+				@include border(1px, $drk-l);
+				img {
+					width: 100%;
+				}
+			}
+			.shots {
+				position: relative;
+				width: 100%;
+				img {
+					position: relative;
+					display: inline-block;
+					float: left;
+					width: 50%;
+					height: auto;
+					max-width: 400px;
+				}
+			}
+			img.cover {
+				width: 100%;
+				height: auto;
+				display: none;
+			}
+			.left {
+				left: 0;
+			}
+			.right {
+				right: 0;
+			}
+		}
+		.preview.free {
+			max-width: 780px;
+		}
+		.ileft {
+			float: left;
+		}
+		.iright {
+			float: right;
+		}
+		.pleft {
+			float: left;
+			.browser.cond {
+				margin-right: 7.5%;
+			}
+		}
+		.pright {
+			float: right;
+			.browser.cond {
+				margin-left: 7.5%;
+			}
+		}
+	}
+
+
+// Media queries
+// ------------------------------------------------------------
+
+	@media screen and (max-width: 1320px) {
+		section.work {
+			.project {
+				.info {
+					@include leader(3.5);
+					.button {
+						width: 65%;
+					}
+				}
+				.info.more {
+					@include leader(3);
+				}
+			}
+			.project.offset {
+				.info {
+					@include leader(4);
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 1200px) {
+		section.work {
+			text-align: center;
+			.project {
+				width: 100%;
+				min-height: 480px;
+				@include padding-x(0%);
+				&:first-of-type {
+					@include leader(-22);
+				}
+				.info {
+					display: block;
+					width: 100%;
+					min-width: 300px;
+					max-width: 480px;
+					margin: auto;
+					@include leader(5.5);
+					text-align: center;
+					p {
+						@include leader(2);
+						@include trailer(4);
+						padding-left: 5%;
+					}
+					.role {
+						width: auto;
+						padding-left: 0;
+						h6 {
+							position: relative;
+							display: inline-block;
+						}
+					}
+					.button {
+						width: 70%;
+					}
+				}
+				.info.more {
+					@include leader(5.5);
+					h2 {
+						@include leader(-0.5);
+						@include trailer(2);
+					}
+					h6 {
+						display: none;
+					}
+				}
+			}
+			.project.offset {
+				@include trailer(0);
+				.info {
+					@include leader(6);
+				}
+			}
+			.ileft, .iright, .pleft, .pright {
+				float: none;
+				.browser.cond {
+					@include margin-x(0%);
+				}
+			}
+			.pwrap {
+				max-width: 780px;
+			}
+			.preview {
+				left: -0.5%;
+				width: 101%;
+				margin: auto;
+				.multiphone {
+					width: 100%;
+				}
+				.shots {
+					position: absolute;
+					left: -0.5%;
+					width: 101%;
+				}
+				img.cover {
+					display: block;
+					width: 101%;
+					height: auto;
+					opacity: 0;
+				}
+			}
+			.preview.free {
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+	@media screen and (max-width: 959px) {
+		section.work {
+			background: $wht;
+			&::after {
+				display: none;
+			}
+			.project {
+				&:first-of-type {
+					@include leader(0);
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		section.work {
+			@include padding-trailer(10);
+			.project {
+				@include padding-leader(2.5);
+				@include padding-trailer(3.5);
+				&:nth-of-type(4) {
+					@include padding-trailer(2);
+				}
+				.browser {
+					right: auto;
+					left: 12.5%;
+				}
+				.multibrowser {
+					.browser.stack {
+						left: 12.5%;
+					}
+				}
+				.shot {
+					right: auto;
+					left: 12.5%;
+					width: 92.5%;
+				}
+				.info {
+					width: 75%;
+					min-width: 250px;
+					max-width: 300px;
+					@include leader(2.75);
+					h2, .button {
+						margin-left: -10%;
+					}
+					h2 {
+						@include leader(0);
+						@include trailer(0);
+						@include lineh(4);
+					}
+					p {
+						@include leader(0.5);
+						@include trailer(1);
+						padding-left: 0;
+					}
+					h2.short {
+						@include lineh(2.75);
+						@include trailer(1);
+					}
+					.role {
+						@include leader(0.25);
+						margin-left: -10%;
+						font-size: 14px;
+						i {
+							font-size: 12px;
+						}
+					}
+					.button {
+						width: 90%;
+						max-width: 192px;
+						@include leader(1.5);
+						@include trailer(1);
+					}
+				}
+				.info.more {
+					@include leader(2.75);
+					h2 {
+						@include leader(0);
+						@include trailer(1.5);
+						@include lineh(3);
+					}
+				}
+			}
+			.project.offset {
+				.browser {
+					right: auto;
+					left: 12.5%;
+				}
+				.phone {
+					top: auto;
+					bottom: 0;
+					right: -2.5%;
+					width: 30%;
+					@include trailer(-2.5);
+				}
+				.info {
+					@include leader(3.5);
+				}
+			}
+			.pwrap {
+				max-width: 542px;
+			}
+			.preview {
+				width: 120%;
+				left: -10%;
+				.multiphone {
+					left: 12.5%;
+					width: 88%;
+				}
+				.shots {
+					left: 5%;
+					width: 110%;
+					img {
+						width: 50%;
+						height: auto;
+						max-width: none;
+					}
+				}
+				img.cover {
+					width: 110%;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 420px) {
+		section.work {
+			@include padding-trailer(7.5);
+			.project {
+				.info {
+					margin-left: 15%;
+				}
+			}
+			.project.offset {
+				.phone {
+					right: 0;
+					width: 31.5%;
+					@include trailer(-2.5);
+				}
+			}
+			.preview {
+				.multibrowser {
+					.browser.stack {
+						left: 17.5%;
+					}
+				}
+			}
+		}
+	}

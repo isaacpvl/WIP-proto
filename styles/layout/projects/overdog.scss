@@ -1,0 +1,43 @@
+
+
+// OverDog styles
+// ------------------------------------------------------------
+
+	$pcolor:	#00345e;
+	body.overdog {
+		header {
+			background: $pcolor;
+			.fade {
+				display: none;
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolor;
+		}
+	}
+	.visual.multiphone.triphone {
+		.phone {
+			&:nth-of-type(2) {
+				z-index: 3;
+			}
+		}
+	}
+
+// next
+	body.project {
+		section.next.overdog {
+			@media screen and (min-width: 641px) {
+				img {
+					@include leader(3.5);
+				}
+			}
+			&:hover, &.active {
+				.peek {
+					background: $pcolor;
+				}
+			}
+		}
+	}

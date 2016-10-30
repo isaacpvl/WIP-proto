@@ -1,0 +1,24 @@
+doctype html
+html
+	head
+		title Isaac Paavola
+		include ../resource/head
+
+	body.home
+		.twrap
+			a#home
+			include ../home/nav
+			include ../home/header
+			include ../home/wall
+			include ../home/work
+			include ../home/about
+			include ../home/contact
+		.news#news
+			.paper
+				img(src="/_img/home/newspaper.jpg")
+		include ../resource/base
+
+	include ../resource/loader
+
+	script(src="/_scripts/plugins.js")
+	script(src="/_scripts/home.js")

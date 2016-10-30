@@ -1,0 +1,324 @@
+
+block nav
+	nav.dark.hide
+		ul
+			include ../resource/pvl
+			li.nav.navb#navb
+				a#navlink(data-pathname="huddlepass")
+					span &#8249;
+					| Prev
+			li.nav.navc#navc
+				a#navlink(data-pathname="past")
+					| Next
+					span &#8250;
+
+block header
+	header.dark.more.hide
+		.wrap
+			.logo#logo
+			.title
+				span#title(data-speed="2.85")
+					h1 What I&rsquo;ve been<br> up to recently.
+		.fade
+		.slide
+	.push#push
+
+block work
+	section.work.bgfade
+		.arrowbar#arrow.hide
+			.arrow#work
+		.head
+			h5 Basically...
+		.overview
+			.detail
+				p This is a more casual place for me to throw up a few quick looks of newer things I&rsquo;ve been on, even if unorganized or unfinished. 
+				p <em>You can click one of the shots below to jump to its&rsquo; respective section.</em>
+		.visual.two-col
+			.shot.small
+				a(data-scroll, data-options="speed: 800", href="#recenta")
+					img(src="/_img/recent/vouch.jpg")
+			.shot.small
+				a(data-scroll, data-options="speed: 1200", href="#recentb")
+					img(src="/_img/recent/justcapital.jpg")
+		.visual.two-col.quad
+			.shot.small
+				a(data-scroll, data-options="speed: 1500", href="#recentc")
+					img(src="/_img/recent/stump.jpg")
+			.shot.small
+				a(data-scroll, data-options="speed: 2000", href="#recentd")
+					img(src="/_img/recent/analytics8.jpg")
+
+		.visual.gap
+		a#recenta
+		.itemhead
+			h2 Vouch
+		.visual.fout.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span vouchwith.us
+				img(src="/_img/recent/vouch-00.jpg")
+				.fin
+		.detail
+			p Vouch is a cool little startup that&rsquo;s already built out a platform where users can monetize their social following/influence by vouching for products they love. Everytime someone is referred to one of numerous compatible merchant websites through Vouch and purchases a product, the user who vouched for it earns a cut of the sale.
+			p Other than the logo icon itself, I established this look and feel for the Vouch brand and platform from scratch, weaving the style deeply into the content and interactions.
+		.itemhead.short
+			h3 Item interactions/grid
+		.visual.single.zoom
+			.shot
+				img(src="/_img/recent/vouch-view.gif")
+		.detail
+			p Browsing through and interacting with the various vouched items on the site was a primary focus. We wanted the items on Vouch to feel like they were special, and worth looking through moreso than your average e-commerce site&rsquo;s content.
+		.visual.single.zoom
+			.shot
+				img(src="/_img/recent/vouch-add.gif")
+		.detail
+			p I designed the process of adding (vouching for) an item really simple and fun. The layout of the steps to adding an item lead right into the layout of simply viewing an item, creating a nice progression and satisfying completion state where the user finishes looking at their vouched item as anyone else would.
+		.visual.single.zoom
+			.shot
+				img(src="/_img/recent/vouch-quotes.gif")
+		.detail
+			p In order to make the items actually feel personally attached to a real person &lsquo;vouching&rsquo; for them, which is what ultimately separates vouch&rsquo;s content from any other site in the ecommerce world, I designed the modules to display snippets of actual user&rsquo;s words along with their profile photo.
+		.visual.single
+			.shot
+				img(src="/_img/recent/vouch-grid.gif")
+		.detail
+			p The design of my grid system isn&rsquo;t exactly the most generic, vanilla module scheme out there if you&rsquo;d noticed. Whenever I design something different like this, I make sure I&rsquo;ve actually vetted it out thoroughly in terms of front-end implementation. Even if I&rsquo;m using Photoshop to concept something, I&rsquo;m thinking in CSS. Anyways, I gathered different types of images the platform would pull from merchant sites, and made sure my CSS would fit all sorts of different aspect ratios in perfectly.
+			p If you&rsquo;re interested in seeing more of the nitty-gritty of my process, you could <a href="http://isaacpvl.com/vouch/grid/" target="_blank">check out one of the little documents</a> I create frequently during projects in order to communicate things to the other people involved.
+		.itemhead.short
+			h3 Item full view
+		.visual.fout.vport.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span vouchwith.us
+				img(src="/_img/recent/vouch-02.jpg")
+				.fin
+		.itemhead
+			h3 Collection page
+		.visual.fout.vport.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span vouchwith.us
+				img(src="/_img/recent/vouch-03.jpg")
+				.fin
+		.detail
+			p Collections were a huge focus as well. We wanted to design them in a way that would make people want to create them simply for expression&rsquo;s sake, if not for the monetization aspect of the platform. For instance, if someone is a super serious cyclist, they definitely have a set of products they&rsquo;ve come to love and trust over their many experiences with different brands and everything. A lot of people are proud of that sort of thing (and they should be) and would love to share their expertise with others.
+		.itemhead
+			h3 User profile
+		.visual.fout.vport.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span vouchwith.us
+				img(src="/_img/recent/vouch-04.gif")
+				.fin
+		.itemhead
+			h3 Page template & elements
+		.visual.fout.vport.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span vouchwith.us
+				img(src="/_img/recent/vouch-07.jpg")
+				.fin
+		.detail
+			p Vouch is still in the works, hopefully a live site will be available soon. Just to show a little more process, feel free to <a href="http://isaacpvl.com/vouch/wires/" target="_blank">check out some of my wireframes + thoughts from early on</a> when we were still establishing direction.
+
+		.visual.gap
+		a#recentb
+		.itemhead
+			h2 JUSTCapital
+		.visual.fout.vport.premier
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span justcapital.com
+				video(autoplay="true", controls="true", preload="auto", loop="loop", muted="muted", poster="/_img/recent/justcapital-poster.jpg")
+					source(src="/_img/recent/justcapital.webm", type="video/webm")
+					source(src="/_img/recent/justcapital.mp4", type="video/mp4")
+				.fin
+		.detail
+			p I recently designed an web campaign for a new corporate justice movement called JUSTCapital. The entire goal is to introduce their movement and start building their audience / getting people invested in the cause. This campaign is intended to launch with an upcoming event and large press release.
+			p All the videos here are direct screen recordings from the front-end I developed for the site. Above you see the landing page intro, for which I created an animated wall of faces that slide downward and fall off. For navigation I implemented a nice 3D transition effect between the menu and the page content.
+		.visual.two-col
+			.shot
+				video(autoplay="true", controls="true", preload="auto", loop="loop", muted="muted", poster="/_img/recent/justcapital-intro-poster.jpg")
+					source(src="/_img/recent/justcapital-intro.webm", type="video/webm")
+					source(src="/_img/recent/justcapital-intro.mp4", type="video/mp4")
+			.shot
+				video(autoplay="true", controls="true", preload="auto", loop="loop", muted="muted", poster="/_img/recent/justcapital-landing-poster.jpg")
+					source(src="/_img/recent/justcapital-landing.webm", type="video/webm")
+					source(src="/_img/recent/justcapital-landing.mp4", type="video/mp4")
+		.detail
+			p Here you can see more context of the landing page as it scrolls down. The intro scrolls into a significant quote from a historical economist that JUSTCapital felt was very defining of their mission. The quote itself is the inspiration for the falling faces, and as they &lsquo;crumble into atoms&rsquo; as you scroll past the quote.
+		.itemhead.short
+			h3 Social engagement<br> campaign quiz
+		.visual.fout.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span justcapital.com/quiz
+				img(src="/_img/recent/justcapital-01.jpg")
+				.fin
+		.detail
+			p There&rsquo;s also a big component in the form of an interactive quiz experience. Each question features a different &lsquo;scene&rsquo; setting and content relevant to one of the main 11 issues of corporate justice Americans care about. For example here is the scene and question for the issue of Environmental Impact. One of the more boring ones for sure, but it illustrates the theme of the quiz well.
+		.visual.single
+			.shot
+				img(src="/_img/recent/justcapital-01-comp.gif")
+		.detail
+			p The format of the questions was pretty cool, and I designed a custom way of answering them as well as a clear, striking way to visualize the results. First, visitors are asked to guess what the situation of an issue <em><b>currently is,</b></em> then, they&rsquo;re asked to give their opinion of what it <em><b>ideally should be,</b></em> before they&rsquo;re given what the actual reality of the matter is. The way I designed it made each step a reveal, and when you see the final reality, it&rsquo;s in contrast to your previous answers. This works especially well as almost all the results were shocking to people.
+
+		.visual.gap
+		a#recentc
+		.itemhead
+			h2 Stump
+		.visual.fout.vport.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span stump.social
+				img(src="/_img/recent/stump-06.jpg")
+				.fin
+		.detail
+			p Stump is another startup that needed a lot of help with a big launch of their platform. A great branding designer had already established the logo and colors, and then I took that and designed the actual platform in a way that built the brand out further, and of course made the process of getting started for new users very, very easy.
+		.itemhead.short
+			h3 Landing page
+		.visual.fout.vport.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span stump.social
+				img(src="/_img/recent/stump-01.jpg")
+				.fin
+		.itemhead.short
+			h3 Campaign page
+		.visual.fout.vport.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span stump.social
+				img(src="/_img/recent/stump-02.jpg")
+				.fin
+		.itemhead.short
+			h3 Onboarding step
+		.visual.fout.vport.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span stump.social
+				img(src="/_img/recent/stump-05.jpg")
+				.fin
+		.itemhead.short
+			h3 Dashboard &<br> user actions
+		.visual.fout.vport.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span stump.social
+				img(src="/_img/recent/stump-06.gif")
+				.fin
+		.detail
+			p The branding designer also did the illustrations you see on the landing page, which are of course absolutely fantastic.
+
+		.visual.gap
+		a#recentd
+		.itemhead
+			h2 Analytics8
+		.visual.fout.vport.premier
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span analytics8.com
+				video(autoplay="true", controls="true", preload="auto", loop="loop", muted="muted", poster="/_img/recent/analytics8-poster.jpg")
+					source(src="/_img/recent/analytics8.webm", type="video/webm")
+					source(src="/_img/recent/analytics8.mp4", type="video/mp4")
+				.fin
+		.detail
+			p Above is screen recording of the live site, featuring the universal navigation menu I designed and built myself.
+			p Analytics8 was a project that had already been mostly designed, but needed some extra help to really flesh things out and make the experience great. The universal navigation of the site was a complete gap that needed to be filled, so I created a highly custom menu that absolutely oozed the pre-established brand. It was really fun to animate and build out the interaction animations using circles and lines similar to the style of the rest of the site.
+		.visual.fout.multiphone
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame
+					img(src="/_img/recent/analytics8-01.jpg")
+				.bottom
+					div
+						span
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame
+					img(src="/_img/recent/analytics8-00.jpg")
+				.bottom
+					div
+						span
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame
+					img(src="/_img/recent/analytics8-02.jpg")
+				.bottom
+					div
+						span
+			.fin
+		.footlink
+			p You can also check out what I&rsquo;ve <a href="https://dribbble.com/isaacpvl", target="_blank">put up on dribbble lately</a>
+
+block next
+	section.next.hide.past#navlink(data-pathname="past")
+		.head
+			h5 Also check out
+		.peek#next
+			h1 A long time ago...
+		.peekbg

@@ -1,0 +1,40 @@
+
+
+// HuddlePass styles
+// ------------------------------------------------------------
+
+	$pcolor:	#404759;
+	$pcolorb:	#353a49;
+	body.huddlepass {
+		header {
+			background: $pcolor url('/_img/huddlepass/linesbg.png');
+			@include retinaimg('/_img/huddlepass/linesbg@2x.png', 12px, 12px);
+			.fade {
+				@include gradient-vert-d(rgba($pcolorb, 0), 50%, $pcolorb, 100%);
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolorb);
+		}
+		.base {
+			background: $pcolor;
+		}
+	}
+
+// next
+	body.project {
+		section.next.huddlepass {
+			@media screen and (min-width: 641px) {
+				img {
+					@include leader(3.5);
+					margin-right: 7.5%;
+				}
+			}
+			&:hover, &.active {
+				.peek {
+					background: url('/_img/huddlepass/linesbg.png') $pcolor;
+					@include retinaimg('/_img/huddlepass/linesbg@2x.png', 12px, 12px);
+				}
+			}
+		}
+	}

@@ -1,0 +1,96 @@
+
+block nav
+	nav.hide
+		ul
+			include ../resource/pvl
+			li.nav.navb#navb
+				a#navlink(data-pathname="overdog")
+					span &#8249;
+					| Prev
+			li.nav.navc#navc
+				a#navlink(data-pathname="2old2play")
+					| Next
+					span &#8250;
+
+block header
+	header.hide
+		.wrap
+			.logo
+				span#logo(data-speed="5.55")
+					img(src="/_img/gennutrition/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1 A strong, visual campaign site rallying against world hunger.
+		.fade
+		.slide
+	.push#push
+
+block work
+	section.work.bgfade
+		.arrowbar#arrow.hide
+			.arrow#work
+		.head
+			h5 Overview
+		.overview
+			.detail
+				p I created a campaign site with strong visual messages for a coalition rallying against world hunger and gathering support.
+			.context
+				div
+					h6 My Role:
+					p aliquam eget lectus
+				div
+					h6 When:
+					p early 2014
+				div
+					h6 With:
+					p just me 
+						i (freelancing)
+		.itemhead
+			h3 Landing page
+		.visual.fout.vport.zoom
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span generationnutrition.com
+				img(src="/_img/gennutrition/gennutrition-landing.jpg")
+				.fin
+		.itemhead
+			h3 Responsiveness
+		.visual.single
+			.shot
+				video(autoplay="true", controls="true", preload="auto", loop="loop", muted="muted", poster="/_img/gennutrition/gennutrition-circles-poster.jpg")
+						source(src="/_img/gennutrition/gennutrition-circles.webm", type="video/webm")
+						source(src="/_img/gennutrition/gennutrition-circles.mp4", type="video/mp4")
+		.itemhead
+			h3 Misc. interactions
+		.visual.single
+			.shot
+				video(autoplay="true", controls="true", preload="auto", loop="loop", muted="muted", poster="/_img/gennutrition/gennutrition-blog-poster.jpg")
+						source(src="/_img/gennutrition/gennutrition-blog.webm", type="video/webm")
+						source(src="/_img/gennutrition/gennutrition-blog.mp4", type="video/mp4")
+		.itemhead
+			h3 Intro sequence
+		.visual.fout.premier
+			.browser.large
+				.top
+					ul
+						li
+						li
+						li
+					span generationnutrition.com
+				video(autoplay="true", controls="true", preload="auto", loop="loop", muted="muted", poster="/_img/gennutrition/gennutrition-poster.jpg")
+					source(src="/_img/gennutrition/gennutrition.webm", type="video/webm")
+					source(src="/_img/gennutrition/gennutrition.mp4", type="video/mp4")
+				.fin
+		.footlink
+			p You can also check out <a href="https://dribbble.com/shots/1501580-Generation-Nutrition-campaign-landing-page-WIP", target="_blank">this project on dribbble</a>
+
+block next
+	section.next.hide.toldtplay#navlink(data-pathname="2old2play")
+		.head
+			h5 Next Project
+		.peek#next
+			img(src="/_img/2old2play/logo.png")

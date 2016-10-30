@@ -1,0 +1,133 @@
+
+block nav
+	nav.hide
+		ul
+			include ../resource/pvl
+			li.nav.navb#navb
+				a#navlink(data-pathname="lifeis")
+					span &#8249;
+					| Prev
+			li.nav.navc#navc
+				a#navlink(data-pathname="gennutrition")
+					| Next
+					span &#8250;
+
+block header
+	header.hide
+		.wrap
+			.logo
+				span#logo(data-speed="5.55")
+					img(src="/_img/overdog/logo.png")
+			.title
+				span#title(data-speed="2.85")
+					h1 Pitting athletes against their fans in online challenges.
+		.fade
+		.slide
+	.push#push
+
+block work
+	section.work.bgfade
+		.arrowbar#arrow.hide
+			.arrow#work
+		.head
+			h5 Overview
+		.overview
+			.detail
+				p I made it easy and exciting for pro athletes to challenge their fans in video games, and for both parties to have a blast.
+			.context
+				div
+					h6 My Role:
+					p UI design & art direction
+				div
+					h6 When:
+					p early 2013
+				div
+					h6 With:
+					p AKTA 
+						i (agency)
+		.itemhead
+			h3 Athletes create<br> challenges
+		.visual.fout.multiphone.triphone
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame
+					img(src="/_img/overdog/odog-record.jpg")
+				.bottom
+					div
+						span
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame.vid
+					video(autoplay="true", controls="true", preload="auto", loop="loop", muted="muted", poster="/_img/overdog/odog-profile.jpg")
+						source(src="/_img/overdog/odog-challenge.webm", type="video/webm")
+						source(src="/_img/overdog/odog-challenge.mp4", type="video/mp4")
+				.bottom
+					div
+						span
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame
+					img(src="/_img/overdog/odog-profile.jpg")
+				.bottom
+					div
+						span
+			.fin
+		.itemhead
+			h3 Fans accept<br> challenges
+		.visual.fout.multiphone.triphone
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame
+					img(src="/_img/overdog/odog-challenges.jpg")
+				.bottom
+					div
+						span
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame
+					img(src="/_img/overdog/odog-enter-challenge.jpg")
+				.bottom
+					div
+						span
+			.phone
+				.top
+					.camera
+						span
+					.speaker
+						span
+				.frame
+					img(src="/_img/overdog/odog-joined-challenge.jpg")
+				.bottom
+					div
+						span
+			.fin
+		.footlink
+			p You can also check out <a href="https://dribbble.com/isaacpvl/projects/120502-OverDog-iPhone", target="_blank">this project on dribbble</a>
+
+block next
+	section.next.hide.gennutrition#navlink(data-pathname="gennutrition")
+		.head
+			h5 Next Project
+		.peek#next
+			img(src="/_img/gennutrition/logo.png")
+		.peekbg

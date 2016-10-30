@@ -1,0 +1,48 @@
+
+
+// SocialCrunch styles
+// ------------------------------------------------------------
+
+	$pcolor:	#fff3dd;
+	$pcolorb:	#fedc9e;
+	$pcolorc:	#edcdc9;
+	body.socialcrunch {
+		header {
+			@include scrunchbg;
+			.bar {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 9px;
+				@include scrunchbar;
+				@include trans(0.25s);
+			}
+			.fade {
+				display: none;
+				@include gradient-vert-d(rgba($pcolor, 0), 75%, $pcolor, 100%);
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			@include scrunchbg;
+		}
+	}
+
+// next
+	body.project {
+		section.next.socialcrunch {
+			@media screen and (min-width: 641px) {
+				img {
+					@include leader(4.5);
+					margin-left: 3%;
+				}
+			}
+			.peekbg {
+				@include scrunchbar;
+			}
+
+		}
+	}

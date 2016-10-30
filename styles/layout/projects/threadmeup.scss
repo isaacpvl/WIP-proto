@@ -1,0 +1,47 @@
+
+
+// ThreadMeUp styles
+// ------------------------------------------------------------
+
+	$pcolor:	#f46272;
+	body.threadmeup {
+		header {
+			background: $pcolor;
+			.fade {
+				@include gradient-vert-d(rgba($pcolor, 0), 75%, $pcolor, 100%);
+			}
+		}
+		.splash {
+			box-shadow: inset 0 0 12px 6px $wht;
+			.vid {
+				video {
+					background-color: $pcolor !important;
+				}
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolor;
+		}
+	}
+
+// next
+	body.project {
+		section.next.threadmeup {
+			@media screen and (min-width: 641px) {
+				img {
+					width: 384px;
+					height: 96px;
+					@include leader(5.5);
+					margin-left: 2.5%;
+				}
+			}
+			&:hover, &.active {
+				.peek {
+					background: $pcolor;
+				}
+			}
+		}
+	}

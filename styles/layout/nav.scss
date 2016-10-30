@@ -1,0 +1,906 @@
+
+
+// Navigation styles
+// ------------------------------------------------------------
+
+	nav {
+		position: fixed;
+		z-index: 99;
+		width: 100%;
+		min-width: 320px;
+		max-width: $max-width;
+		height: 60px;
+		text-align: right;
+		font-size: 16px;
+		color: $wht;
+		@include innershadow(0px, $wht-95);
+		@include noselect;
+		@include animate(0.375s);
+		@include trans(0.2s);
+		ul {
+			width: 100%;
+			margin: 0 auto;
+			white-space: nowrap;
+			@include dropshadow(1px, $blk-0);
+			@include trans(0.2s);
+			@include reset;
+		}
+		li {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			@include margin-x(30px);
+			text-align: center;
+			@include trans(0.2s);
+			@include fadeindown;
+			a {
+				@extend .caps-l;
+			}
+			&:hover {
+				@include twowayshadow(-4px, 0px, $wht);
+			}
+			&:nth-of-type(2) {
+				@include animate(0.55s, 1s);
+			}
+			&:nth-of-type(3) {
+				@include animate(0.65s, 1.05s);
+			}
+			&:nth-of-type(4) {
+				@include animate(0.75s, 1.1s);
+			}
+			&:nth-of-type(5) {
+				@include animate(0.85s, 1.15s);
+			}
+			&:nth-of-type(6) {
+				@include animate(0.9s, 1.1825s);
+			}
+		}
+		li.active {
+			@include twowayshadow(-4px, 0px, $wht);
+			a {
+				color: $wht;
+				&:hover {
+					@include treset;
+				}
+			}
+		}
+		li.disabled {
+			box-shadow: none;
+			a {
+				color: $wht-5;
+				&:hover, &:active {
+					@include treset;
+				}
+			}
+		}
+		li.social {
+			position: relative;
+			display: inline-block;
+			margin: 0 0 0 18px;
+			a {
+				width: 42px;
+				@extend .social;
+				span {
+					font-size: 26px;
+				}
+			}
+			&:last-of-type {
+				a {
+					span {
+						font-size: 24px;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+		a {
+			display: block;
+			position: relative;
+			height: 102px;
+			padding-top: 66px;
+			color: $wht;
+			text-decoration: none;
+			&:hover {
+				color: $wht;
+				@include tmove(0, -3px);
+			}
+			&:active {
+				color: $wht;
+				@include treset;
+			}
+			@include trans(0.2s);
+		}
+		li.navb, li.navc, li.navd {
+			span:last-of-type {
+				display: none;
+			}
+		}
+
+	// PVL link
+		li.nava {
+			position: absolute;
+			top: 0;
+			left: 5%;
+			width: 64px;
+			margin: 0;
+			text-align: left;
+			cursor: pointer;
+			@include twowayshadow(-4px, 2px, $wht);
+			@include trans(0.4s);
+			@include animatereset(0.35s, 1s);
+			@include atiming(ease-out);
+			@include pvlin;
+			a {
+				height: 105px;
+				@extend .caps-d;
+				font-size: 32px;
+				color: $wht;
+			}
+			.initials {
+				position: relative;
+				z-index: 1;
+				letter-spacing: 2px;
+				span {
+					@include fadein;
+					&:nth-of-type(1) {
+						@include animate(0.5s, 0.3s);
+					}
+					&:nth-of-type(2) {
+						@include animate(0.5s, 0.45s);
+					}
+					&:nth-of-type(3) {
+						@include animate(0.5s, 0.6s);
+					}
+				}
+				div {
+					position: relative;
+					display: inline-block;
+					width: 0;
+					@include trans(0.37s, 0.03s);
+				}
+			}
+			.lastname {
+				position: absolute;
+				top: 0;
+				letter-spacing: 4px;
+				opacity: 0;
+				b {
+					color: $wht-0;
+					opacity: 0;
+				}
+				span {
+					position: relative;
+					&:nth-of-type(2) {
+						margin-left: 1px;
+					}
+				}
+				div {
+					position: relative;
+					display: inline-block;
+					width: 0;
+					@include trans(0.4s);
+				}
+			}
+			h6 {
+				position: absolute;
+				left: 1px;
+				width: 180px;
+				@include padding-leader(1.5);
+				font-size: 18px;
+				opacity: 0;
+				letter-spacing: -0.002em;
+				@include tmove(0, -15px);
+				@include trans(0.18s, 0.03s);
+				@include ttiming(ease-in);
+				&:last-of-type {
+					@include padding-leader(3.75);
+					letter-spacing: 0;
+					@include tmove(0, -36px);
+					@include trans(0.25s);
+				}
+			}
+		}
+		li.nava.full {
+			a {
+				&:hover {
+					@include treset;
+				}
+			}
+			&:hover, &.hover {
+				width: 176px;
+				padding-right: 28px;
+				@include trans(0.25s);
+				.initials {
+					div {
+						@include trans(0.25s);
+						&:first-of-type {
+							width: 53px;
+						}
+						&:last-of-type {
+							width: 30px;
+						}
+					}
+				}
+				.lastname {
+					opacity: 1;
+					div {
+						@include treset;
+						@include trans(0.25s);
+						&:nth-of-type(1) {
+							width: 25px;
+						}
+						&:nth-of-type(2) {
+							width: 25px;
+						}
+						&:nth-of-type(3) {
+							width: 23px;
+						}
+					}
+				}
+				h6 {
+					@include treset;
+					@include trans(0.24s, 0.06s);
+					@include ttiming(ease-out);
+					&:last-of-type {
+						@include trans(0.32s);
+					}
+				}
+			}
+		}
+	}
+
+// sticky state
+	nav.sticky {
+		z-index: 95;
+		height: 60px;
+		@include innershadow(60px, $wht-95);
+		a {
+			height: 60px;
+			padding-top: 26px;
+			color: $blk-4;
+			&:hover {
+				color: $blk-5;
+			}
+		}
+		ul {
+			@include dropshadow(1px, $blk-15);
+		}
+		li {
+			&:hover {
+				@include twowayshadow(-3px, 1px, $blk-45);
+			}
+		}
+		li.active {
+			@include twowayshadow(-3px, 1px, $red);
+			a {
+				color: $red;
+				&:hover {
+					@include treset;
+				}
+			}
+		}
+		li.disabled {
+			box-shadow: none;
+			a {
+				color: $blk-25;
+			}
+			&:hover {
+				box-shadow: none;
+			}
+		}
+		li.social {
+			a {
+				span {
+					font-size: 24px;
+				}
+			}
+			&:last-of-type {
+				span {
+					font-size: 22px;
+				}
+			}
+		}
+		li.nava {
+			width: 56px;
+			@include twowayshadow(0px, 0px, $wht-0);
+			&:hover, &.hover {
+				@include twowayshadow(-4px, 1px, $red);
+			}
+			a {
+				height: 60px;
+				padding-top: 26px;
+				font-size: 28px;
+				color: $red;
+			}
+			.initials {
+				letter-spacing: 2px;
+			}
+			.lastname {
+				letter-spacing: 4px;
+				b {
+					color: $wht-0;
+				}
+				span {
+					&:nth-of-type(2) {
+						margin-left: -1px;
+					}
+				}
+			}
+			h6 {
+				left: 0;
+				@include padding-leader(1);
+				font-size: 16px;
+				letter-spacing: -0.016em;
+				color: $red;
+				@include tmove(0, -15px);
+				&:last-of-type {
+					@include padding-leader(3);
+					letter-spacing: -0.01em;
+					@include tmove(0, -30px);
+				}
+			}
+			&:hover, &.hover {
+				width: 150px;
+				padding-right: 28px;
+				.initials {
+					div {
+						&:first-of-type {
+							width: 44px;
+						}
+						&:last-of-type {
+							width: 25px;
+						}
+					}
+				}
+				.lastname {
+					div {
+						&:nth-of-type(1) {
+							width: 21px;
+						}
+						&:nth-of-type(2) {
+							width: 20px;
+						}
+						&:nth-of-type(3) {
+							width: 19px;
+						}
+					}
+				}
+				h6 {
+					@include treset;
+				}
+			}
+		}
+		li:nth-of-type(5) {
+			&:hover {
+				@include twowayshadow(-3px, 1px, #4da7de);
+				a:hover {
+					color: #4da7de;
+				}
+			}
+		}
+		li:nth-of-type(6) {
+			&:hover {
+				@include twowayshadow(-3px, 1px, #e84d88);
+				a:hover {
+					color: #e84d88;
+				}
+			}
+		}
+	}
+	nav.blue {
+		@include innershadow(60px, rgba($blu, 0.85));
+		a {
+			color: $wht-65;
+			&:hover {
+				color: $wht-9;
+			}
+		}
+		li {
+			&:hover {
+				@include twowayshadow(-3px, 1px, $wht-8);
+			}
+		}
+		li.active {
+			@include twowayshadow(-3px, 1px, $wht-85);
+			a {
+				color: $wht;
+				&:hover {
+					@include treset;
+				}
+			}
+		}
+		li.nava {
+			@include twowayshadow(0px, 0px, $wht-0);
+			&:hover, &.hover {
+				@include twowayshadow(-4px, 1px, $wht);
+			}
+			a, h6 {
+				color: $wht;
+			}
+		}
+		li:nth-of-type(5), li:nth-of-type(6) {
+			&:hover {
+				@include twowayshadow(-3px, 1px, $wht-8);
+				a:hover {
+					color: $wht-9;
+				}
+			}
+		}
+	}
+	nav.dark {
+		li.active {
+			@include twowayshadow(-4px, 0px, $red);
+			a {
+				color: $red;
+			}
+		}
+	}
+
+// arrows
+	.arrowbar {
+		position: relative;
+		width: 100%;
+		height: 27px;
+		overflow: hidden;
+		@include trans(0.5s);
+	}
+	.arrow {
+		@include trans(0.5s);
+		@include arrow(27px, $red);
+		margin: auto;
+		@include animatereset(0.5s, 1.8s);
+		@include arrowin;
+	}
+	.arrowb {
+		@include trans(0.25s);
+		@include arrow(27px, $wht);
+		margin: auto;
+	}
+	.arrowc {
+		@include trans(0.25s);
+		@include arrow(27px, $blu);
+		margin: auto;
+	}
+	.arrow.out, .arrowb.out, .arrowc.out {
+		@include tmove(0, -27px);
+	}
+
+
+// Media queries
+// ------------------------------------------------------------
+
+	@media screen and (min-width: $max-width+1) {
+		nav {
+			li.nava {
+				left: 6%;
+			}
+		}
+	}
+	@media screen and (max-width: 1023px) {
+		nav {
+			li {
+				@include margin-x(24px);
+			}
+		}
+	}
+	@media screen and (max-width: 959px) {
+		nav {
+			position: fixed;
+			li {
+				@include margin-x(18px);
+			}
+			li.social {
+				margin: 0 0 0 12px;
+			}
+		}
+		nav.sticky {
+			top: 0;
+			z-index: 95;
+		}
+	}
+	@media screen and (max-width: 880px) {
+		nav {
+			li.social {
+				position: absolute;
+				top: 114px;
+				right: 5.5%;
+				@include fadeinleft;
+				a {
+					height: 66px;
+					padding-top: 30px;
+				}
+				&:last-of-type {
+					top: 180px;
+				}
+			}
+		}
+		nav.sticky {
+			li.social {
+				display: none;
+			}
+		}
+	}
+	@media screen and (max-width: 720px) {
+		nav {
+			li.social {
+				position: relative;
+				top: auto;
+				right: auto;
+				a {
+					height: 102px;
+					padding-top: 66px;
+				}
+			}
+			li.social:last-of-type {
+				top: auto;
+			}
+			li.navb, li.navc, li.navd {
+				span:first-of-type {
+					display: none;
+				}
+				span:last-of-type {
+					display: block;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		nav {
+			height: 48px;
+			font-size: 14px;
+			@include trans(0.3s);
+			li {
+				margin: 0 3.5%;
+				&:hover {
+					@include twowayshadow(-3px, 1px, $wht);
+				}
+			}
+			li.active {
+				@include twowayshadow(-3px, 1px, $wht);
+				a {
+					&:hover {
+						@include treset;
+					}
+				}
+			}
+			li.social {
+				position: absolute;
+				top: 78px;
+				right: 5.5%;
+				a {
+					height: 66px;
+					padding-top: 30px;
+				}
+			}
+			li.social:last-of-type {
+				top: 142px;
+			}
+			a {
+				height: 72px;
+				padding: 42px 0 18px 0;
+				&:hover {
+					@include treset;
+				}
+				&:active {
+					@include treset;
+				}
+			}
+			li.nava {
+				width: 48px;
+				height: 72px;
+				@include twowayshadow(-3px, 2px, $wht);
+				a {
+					padding-top: 40px;
+					font-size: 24px;
+				}
+				.lastname, h6 {
+					display: none;
+				}
+			}
+			li.nava.full {
+				&:hover, &.hover {
+					width: 48px;
+					padding-right: 0;
+					.initials {
+						div {
+							&:first-of-type, &:last-of-type {
+								width: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+		nav.sticky {
+			height: 48px;
+			@include trans(0.3s);
+			a {
+				height: 48px;
+				padding: 20px 0 16px 0;
+			}
+			ul {
+				height: 48px;
+			}
+			li {
+				margin: 0 3.5%;
+			}
+			li.social {
+				display: none;
+			}
+			li.nava {
+				width: 48px;
+				height: 48px;
+				margin: 0;
+				a {
+					font-size: 24px;
+					height: 48px;
+					padding-top: 19px;
+				}
+				&:hover, &.hover {
+					width: 48px;
+					padding-right: 0;
+					.initials {
+						div {
+							&:first-of-type, &:last-of-type {
+								width: 0;
+							}
+						}
+					}
+				}
+				&.hover {
+					box-shadow: none;
+				}
+			}
+		}
+		.arrowbar {
+			height: 0;
+		}
+		.arrow, .arrowb, .arrowc {
+			@include tmove(0, -27px);
+		}
+	}
+	@media screen and (max-width: 420px) {
+		nav {
+			li.nava {
+				left: 6%;
+			}
+			li.social {
+				top: 72px;
+			}
+			li.social:last-of-type {
+				top: 130px;
+			}
+		}
+	}
+	// @media screen and (min-width: 480px) and (max-height: 444px) {
+	// 	nav {
+	// 		a {
+	// 			height: 70px;
+	// 			padding-top: 36px;
+	// 		}
+	// 		li.nava {
+	// 			a {
+	// 				height: 72px;
+	// 				padding-top: 36px;
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+
+// Project navigation styles
+// ------------------------------------------------------------
+
+	body.project {
+		nav {
+			ul {
+				@include animate(1s, 0.5s);
+			}
+			.navb, .navc {
+				a {
+					span {
+						position: absolute;
+						line-height: 8px;
+						font-size: 30px;
+						font-weight: 500;
+					}
+					&::after {
+						content: ' Project';
+					}
+				}
+			}
+			.navb {
+				margin: 0 30px 0 24px;
+				a {
+					padding-left: 24px;
+				}
+				span {
+					left: 0px;
+				}
+			}
+			.navc {
+				margin: 0 24px 0 30px;
+				a {
+					padding-right: 24px;
+				}
+				span {
+					right: 0px;
+				}
+			}
+			li {
+				margin: 0;
+				a {
+					color: $wht;
+				}
+				&:nth-of-type(2) {
+					@include animate(0.5s, 0.2s);
+				}
+				&:nth-of-type(3) {
+					@include animate(0.5s, 0.2s);
+				}
+			}
+			li.disabled {
+				a {
+					color: $wht-5;
+				}
+			}
+			.navb, .navc, .navd {
+				span:last-of-type {
+					display: inline-block;
+				}
+			}
+		}
+		nav.sticky {
+			li.nava {
+				@include twowayshadow(0px, 0px, $wht-0);
+				&:hover, &.hover {
+					a {
+						color: $red;
+					}
+					@include twowayshadow(-4px, 1px, $red);
+				}
+				a {
+					color: $red;
+				}
+			}
+			li {
+				a {
+					color: $blk-4;
+					&:hover {
+						color: $blk-65;
+					}
+				}
+			}
+			li.active {
+				@include twowayshadow(-3px, 1px, $red);
+				a {
+					color: $red;
+				}
+			}
+			li.disabled {
+				box-shadow: none;
+				a {
+					color: $blk-2;
+				}
+				&:hover {
+					box-shadow: none;
+				}
+			}
+		}
+		nav.dark {
+			li.nava {
+				@include twowayshadow(-5px, 1px, $red);
+				&:hover, &.hover {
+					a {
+						color: $red;
+					}
+					@include twowayshadow(-5px, 1px, $red);
+				}
+				a {
+					color: $red;
+				}
+				h6 {
+					color: $red;
+				}
+			}
+			li {
+				&:hover {
+					@include twowayshadow(-3px, 1px, $red);
+				}
+			}
+			li.active {
+				@include twowayshadow(-3px, 1px, $red);
+				a {
+					color: $red;
+				}
+			}
+			a {
+				color: $blk-6;
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+		nav.dark.sticky {
+			li.nava {
+				@include twowayshadow(0px, 0px, $wht-0);
+				&:hover, &.hover {
+					@include twowayshadow(-4px, 1px, $red);
+				}
+			}
+			li.navb, li.navc {
+				a {
+					&:hover {
+						color: $blk-6;
+					}
+				}
+				&:hover {
+					@include twowayshadow(-3px, 1px, $blk-5);
+				}
+			}
+		}
+		.arrow {
+			@include animatereset(0.3s, 0.65s);
+		}
+		nav.fade {
+			@include innershadow(60px, $wht-0);
+			ul {
+				@include dropshadow(1px, $blk-0);
+			}
+			li.nava a {
+				color: $blk-3;
+			}
+			.navb a, .navc a {
+				opacity: 0.5;
+			}
+		}
+	}
+	body.project.out nav.fade, body.project nav.fade:hover {
+		@include innershadow(60px, $wht-95);
+		ul {
+			@include dropshadow(1px, $blk-15);
+		}
+		li.nava a {
+			color: $red;
+		}
+		.navb a, .navc a {
+			opacity: 1;
+		}
+	}
+
+
+// Media queries
+// ------------------------------------------------------------
+
+	@media screen and (max-width: 720px) {
+		body.project {
+			nav {
+				.navb, .navc {
+					a {
+						&::after {
+							content: '';
+						}
+					}
+				}
+				.navb, .navc {
+					margin: 0 4%;
+				}
+				.navb {
+					padding-right: 3px;
+				}
+				.navc {
+					margin-right: 2%;
+					padding-left: 3px;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		body.project {
+			nav.dark {
+				li.nava {
+					@include twowayshadow(-3px, 2px, $red);
+				}
+			}
+		}
+	}

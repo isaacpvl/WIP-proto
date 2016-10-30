@@ -1,0 +1,60 @@
+
+
+// Past work styles
+// ------------------------------------------------------------
+
+	$pcolor:	$blu-d;
+	body.project.past {
+		header {
+			background: $pcolor;
+			.fade {
+				@include gradient-vert-d(rgba($pcolor, 0), 65%, $pcolor, 100%);
+			}
+		}
+		.splash {
+			.vid {
+				opacity: 0.5;
+				video {
+					background-color: $pcolor !important;
+				}
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolor;
+		}
+		.overview {
+			@include padding-x(5%);
+		}
+		@media screen and (max-width: 640px) {
+			header {
+				.title {
+					h1 {
+						@include lineh(4.5);
+						font-size: 34px;
+					}
+				}
+			}
+		}
+	}
+
+// next
+	body.project {
+		section.next.past {
+			h1 {
+				text-shadow: 1px 2px $blk-1;
+			}
+			.peekbg {
+				background: $pcolor url('/_img/home/wallbanner.jpg') no-repeat;
+				background-size: 100%;
+			}
+			@media screen and (max-width: 640px) {
+				.peekbg {
+					background-size: 200%;
+					background-position: 50% 0%;
+				}
+			}
+		}
+	}

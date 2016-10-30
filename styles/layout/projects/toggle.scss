@@ -1,0 +1,40 @@
+
+
+// Toggle TV styles
+// ------------------------------------------------------------
+
+	$pcolor:	#334253;
+	body.toggle {
+		header {
+			background: $pcolor;
+			.fade {
+				display: none;
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolor;
+		}
+	}
+
+// next
+	body.project {
+		section.next.toggle {
+			@media screen and (min-width: 641px) {
+				img {
+					width: 480px;
+					height: 160px;
+				}
+			}
+			img {
+				@include leader(3);
+			}
+			&:hover, &.active {
+				.peek {
+					background: $pcolor;
+				}
+			}
+		}
+	}

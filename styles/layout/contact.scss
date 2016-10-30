@@ -1,0 +1,201 @@
+
+
+// Contact styles
+// ------------------------------------------------------------
+
+	section.contact {
+		@include padding-trailer(36);
+		background: $wht;
+		background: url('/_img/home/contactbg.jpg') no-repeat bottom $wht;
+		background-position: 50% 100%;
+		background-size: 100%;
+		text-align: center;
+		.head.visit {
+			h5 {
+				&::after {
+					content: none;
+				}
+			}
+			h6 {
+				position: absolute;
+				width: 100%;
+				@include leader(0.7);
+				@include lineh(2);
+				font-size: 16px;
+				font-style: italic;
+				opacity: 0.6;
+			}
+		}
+		.col {
+			position: relative;
+			display: inline-block;
+			margin-right: 6%;
+			@include padding-leader(4);
+			@include padding-trailer(2);
+			h4 {
+				display: inline-block;
+				vertical-align: middle;
+				@extend .caps-d;
+				letter-spacing: 0.025em;
+			}
+			img {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 12px;
+			}
+			a {
+				@include padding-leader(2);
+				@include padding-trailer(2);
+				padding-right: 10px;
+				@include twowayshadow(0px, 0px, $blk);
+				span {
+					display: inline-block;
+				}
+				img, span, h4 {
+					opacity: 1;
+					@include trans(0.2s);
+				}
+				&:hover, &:focus {
+					color: $blk;
+					@include twowayshadow(-3px, 1px, $blk);
+					img, span, h4 {
+						@include tmove(0, -2px);
+						opacity: 1;
+					}
+				}
+				&:active {
+					img, span, h4 {
+						@include treset;
+						@include trans(0.1s);
+					}
+				}
+			}
+		}
+		.col.method {
+			a {
+				padding-right: 10px;
+				.skype {
+					padding-left: 58px;
+				}
+				span.social {
+					position: absolute;
+					margin: 14px 0 0 8px;
+				}
+			}
+		}
+		.col.social {
+			margin-right: 0;
+			a {
+				margin: 0 6px;
+				padding-right: 0;
+				&:nth-of-type(2) {
+					font-size: 26px;
+					font-weight: 600;
+				}
+				&:nth-of-type(3) {
+					font-weight: 400;
+				}
+				span {
+					width: 48px;
+				}
+			}
+		}
+		.col.office {
+			width: 100%;
+			margin-right: 0;
+			@include padding-trailer(6);
+			white-space: nowrap;
+			a {
+				width: 286px;
+				margin-right: 10%;
+			}
+			.digits {
+				margin-right: 5%;
+			}
+		}
+		.social {
+			font-size: 28px;
+			a {
+				margin: 0 6px;
+				padding-right: 0;
+				&:nth-of-type(2) {
+					font-size: 26px;
+					font-weight: 600;
+				}
+				&:nth-of-type(3) {
+					font-weight: 400;
+				}
+			}
+		}
+	}
+
+
+// Media queries
+// ------------------------------------------------------------
+
+	@media screen and (max-width: 1280px) {
+		section.contact {
+			background-size: 120%;
+		}
+	}
+	@media screen and (max-width: 959px) {
+		section.contact {
+			background-position: 60% 100%;
+			background-size: 150%;
+			.col {
+				display: block;
+				width: auto;
+				min-width: 0;
+				margin-right: 0;
+				@include padding-leader(3);
+				@include padding-trailer(2);
+			}
+			.col.social {
+				@include leader(2.5);
+			}
+			.col.office {
+				width: auto;
+				height: auto;
+				a {
+					width: auto;
+					margin-right: 0;
+				}
+				.digits {
+					display: block;
+					@include leader(5);
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 640px) {
+		section.contact {
+			@include padding-trailer(24);
+			background-size: 1000px auto;
+			background-position: 76% 100%;
+			.head.visit {
+				@include padding-leader(3);
+				@include padding-trailer(0);
+			}
+			.col {
+				@include padding-leader(3);
+				@include padding-trailer(0);
+				strong {
+					display: none;
+				}
+			}
+			.col.office {
+				@include padding-leader(4);
+				.digits {
+					@include leader(3);
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 420px) {
+		section.contact {
+			@include padding-trailer(18);
+			background-size: 720px auto;
+			background-position: 60% 100%;
+		}
+	}

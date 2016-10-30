@@ -1,0 +1,56 @@
+
+
+// Dos Toros styles
+// ------------------------------------------------------------
+
+	$pcolor:	$blk;
+	body.dostoros {
+		header {
+			background: $pcolor url('/_img/dostoros/bg.jpg') no-repeat;
+			background-size: 100%;
+			.fade {
+				@include gradient-vert-d(rgba($pcolor, 0), 65%, $pcolor, 100%);
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolor;
+		}
+		@media screen and (max-width: 959px) {
+			header {
+				background-size: 150%;
+				background-position: 60% 0%;
+			}
+		}
+		@media screen and (max-width: 640px) {
+			header {
+				background-size: 225%;
+				background-position: 65% 0%;
+			}
+		}
+	}
+
+// next
+	body.project {
+		section.next.dostoros {
+			@media screen and (min-width: 641px) {
+				img {
+					width: 432px;
+					height: 108px;
+					@include leader(4);
+				}
+			}
+			.peekbg {
+				background: $pcolor url('/_img/dostoros/bg.jpg') no-repeat;
+				background-size: 100%;
+			}
+			@media screen and (max-width: 640px) {
+				.peekbg {
+					background-size: 150%;
+					background-position: 50% 0%;
+				}
+			}
+		}
+	}

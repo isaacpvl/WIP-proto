@@ -1,0 +1,34 @@
+
+
+// Generation Nutrition styles
+// ------------------------------------------------------------
+
+	$pcolor:	#2d293d;
+	body.gennutrition {
+		header {
+			background: $pcolor;
+			.fade {
+				display: none;
+			}
+		}
+		.arrow {
+			@include arrow(27px, $pcolor);
+		}
+		.base {
+			background: $pcolor;
+		}
+	}
+
+// next
+	body.project {
+		section.next.gennutrition {
+			img {
+				@include leader(2);
+			}
+			&:hover, &.active {
+				.peek {
+					background: $pcolor;
+				}
+			}
+		}
+	}
